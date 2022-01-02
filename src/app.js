@@ -2,13 +2,13 @@ import express from 'express'
 import morgan from 'morgan'
 import pkg from '../package.json'
 
-//Routes
-import locationRoutes from './routers/location.routes'
+import { API_V1_0 } from './routers/v-1.0'
 
 const app = express()
 
 app.set('pkg', pkg)
 
+app.use(express.json())
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
   })
 })
 
-app.use('/locations', locationRoutes)
+app.use('/api/v1.0', require('./routers/v-1.0').default)
 
 export default app

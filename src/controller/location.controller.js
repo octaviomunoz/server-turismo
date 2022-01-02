@@ -1,4 +1,9 @@
-export const createLocation = (req, res) => {}
+import Location from '../models/Location'
+
+export const createLocation = (req, res) => {
+  console.log(req.body)
+  res.json('Creacion de location')
+}
 
 export const getLocations = (req, res) => {
   res.json('get locations')
