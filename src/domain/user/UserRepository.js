@@ -15,7 +15,7 @@ class UserRepository {
     throw new Error('Not implemented')
   }
 
-  getByEmail(email) {
+  getByEmail(userEmail) {
     throw new Error('Not implemented')
   }
 
