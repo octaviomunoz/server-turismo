@@ -10,7 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Octavio Muñoz",
-  "license": "ISC",
+  "license": "GNU General Public License v3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octaviomunoz/server-turismo"},
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

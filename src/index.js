@@ -1,4 +1,12 @@
+import dotenv from 'dotenv'
+
 import app from './app'
-import './database'
-app.listen(4000)
-console.log('SERVER LIST  ON PORT', 4000)
+import { bootstrap } from './infrastructure/config/bootstrap'
+
+dotenv.config()
+
+//bootstrap.init()
+
+const PORT = process.env.SERVER_PORT || 4000
+app.listen(PORT)
+console.log('SERVER LIST ON PORT', PORT)
