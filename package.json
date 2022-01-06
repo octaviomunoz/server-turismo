@@ -7,13 +7,14 @@
     "build": "babel src --out-dir build",
     "dev": "nodemon src/index.js --exec babel-node",
     "start": "node build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "author": "Octavio Muñoz",
   "license": "GNU General Public License v3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/octaviomunoz/server-turismo"},
+    "url": "https://github.com/octaviomunoz/server-turismo"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -29,6 +30,7 @@
     "@babel/core": "^7.16.7",
     "@babel/node": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
+    "ava": "^4.0.0",
     "nodemon": "^2.0.15"
   }
 }

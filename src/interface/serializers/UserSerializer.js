@@ -1,13 +1,13 @@
 const _serializerSingleUser = (user) => {
   return {
     id: user.id,
-    'first-name': user.firstName,
-    'last-name': user.lastName,
+    firstName: user.firstName,
+    lastName: user.lastName,
     email: user.email,
   }
 }
 
-export const serialize = (data) => {
+const serialize = (data) => {
   if (!data) {
     throw new Error('Expect data to be not undefined nor null')
   }
@@ -16,3 +16,5 @@ export const serialize = (data) => {
   }
   return _serializerSingleUser(data)
 }
+
+export default serialize

@@ -3,7 +3,12 @@ import bcrypt from 'bcryptjs'
 
 const userSchema = new Schema(
   {
-    username: {
+    firstName: {
+      type: String,
+      required: true,
+    },
+
+    lastName: {
       type: String,
       required: true,
     },
@@ -17,12 +22,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    roles: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Role',
-      },
-    ],
   },
   {
     timestamps: true,
